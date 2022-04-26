@@ -1,0 +1,12 @@
+import UIKit
+
+let pattern = ""
+
+func useRegex(for text: String) -> Bool {
+    let regex = try! NSRegularExpression(pattern: pattern)
+    let range = NSRange(location: 0, length: text.count)
+    let matches = regex.matches(in: text, options: [], range: range)
+    return matches.first != nil
+}
+
+print(useRegex(for: ""))
